@@ -1,0 +1,47 @@
+body {
+  background-color: #f0f0f5; 
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  color: #333; 
+}
+
+.container {
+  background-color: #ffffff; 
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+  text-align: center; 
+  vertical-align: middle;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+button {
+  margin-top: 10px;
+}
+
+#calculate-btn {
+  background-color: #28a745;
+  border-color: #28a745;
+  color: white;
+}
+
+#reset-btn {
+  background-color: #dc3545;
+  border-color: #dc3545;
+  color: white;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  margin: 0 auto;         
+}
