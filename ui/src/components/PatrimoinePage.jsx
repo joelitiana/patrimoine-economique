@@ -26,14 +26,14 @@ function PatrimoinePage() {
         datasets: [
           {
             label: 'Valeur du Patrimoine',
-            data: response.data.values, 
+            data: response.data.values,
             borderColor: '#007bff',
             backgroundColor: 'rgba(0, 123, 255, 0.2)',
           }
         ]
       });
     } catch (error) {
-      console.error('Erreur lors de la récupération des données', error);
+      console.log('Erreur lors de la récupération des données', error);
     }
   };
 
@@ -44,21 +44,21 @@ function PatrimoinePage() {
         <Card.Body>
           <Row>
             <Col md={6}>
-              <Form.Group controlId="formDateDebut">
+              <Form.Group>
                 <Form.Label>Date de Début</Form.Label>
                 <DatePicker
                   selected={dateDebut}
-                  onChange={(date) => setDateDebut(date)}
+                  onChange={date => setDateDebut(date)}
                   dateFormat="yyyy/MM/dd"
                 />
               </Form.Group>
             </Col>
             <Col md={6}>
-              <Form.Group controlId="formDateFin">
+              <Form.Group>
                 <Form.Label>Date de Fin</Form.Label>
                 <DatePicker
                   selected={dateFin}
-                  onChange={(date) => setDateFin(date)}
+                  onChange={date => setDateFin(date)}
                   dateFormat="yyyy/MM/dd"
                 />
               </Form.Group>
@@ -66,12 +66,12 @@ function PatrimoinePage() {
           </Row>
           <Row className="my-3">
             <Col md={6}>
-              <Form.Group controlId="formJour">
+              <Form.Group>
                 <Form.Label>Jour</Form.Label>
                 <Form.Control
                   as="select"
                   value={jour}
-                  onChange={(e) => setJour(e.target.value)}
+                  onChange={e => setJour(e.target.value)}
                 >
                   <option value="1">Jour 1</option>
                   <option value="2">Jour 2</option>

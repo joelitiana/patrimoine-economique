@@ -1,16 +1,27 @@
-import express from "express";
-import {
+const express = require("express");
+const {
   getPossessions,
   createPossession,
   updatePossession,
   closePossession,
-} from "../controllers/possessionController.js";
+} = require("../controllers/possessionController");
 
 const router = express.Router();
 
-router.get("/", getPossessions);
-router.post("/", createPossession);
-router.put("/:libelle", updatePossession);
-router.put("/:libelle/close", closePossession);
+router.get("/", function(req, res) {
+  getPossessions(req, res);
+});
 
-export default router;
+router.post("/", function(req, res) {
+  createPossession(req, res);
+});
+
+router.put("/:libelle", function(req, res) {
+  updatePossession(req, res);
+});
+
+router.put("/:libelle/close", function(req, res) {
+  closePossession(req, res);
+});
+
+module.exports = router;

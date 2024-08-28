@@ -1,12 +1,17 @@
-import express from "express";
-import {
+const express = require("express");
+const {
   getValeurPatrimoine,
   getValeurPatrimoineRange,
-} from "../controllers/patrimoineController.js";
+} = require("../controllers/patrimoineController");
 
 const router = express.Router();
 
-router.get("/:date", getValeurPatrimoine);
-router.post("/range", getValeurPatrimoineRange);
+router.get("/:date", function(req, res) {
+  getValeurPatrimoine(req, res);
+});
 
-export default router;
+router.post("/range", function(req, res) {
+  getValeurPatrimoineRange(req, res);
+});
+
+module.exports = router;
