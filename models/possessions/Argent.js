@@ -1,4 +1,5 @@
 import Possession from "./Possession.js";
+
 var TYPE_ARGENT = {
   Courant: "Courant",
   Epargne: "Epargne",
